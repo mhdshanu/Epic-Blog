@@ -2,14 +2,13 @@
 
 /* Existing styles */
 
-
-  /* Additional media query for smaller screens */
-  @media (max-width: 600px) {
-    footer {
-      font-size: 12px; /* Decrease font size for smaller screens */
-    }
+/* Additional media query for smaller screens */
+@media (max-width: 600px) {
+  footer {
+    font-size: 12px; /* Decrease font size for smaller screens */
+    padding: 5px; /* Adjust padding for smaller screens */
   }
   footer{
     text-align: center;
   }
-  
+}

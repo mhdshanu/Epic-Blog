@@ -1,40 +1,41 @@
+/* Reset and general styles */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #9ad4d6, #f5c8e9); /* Updated background gradient */
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-  }
-  
-  @keyframes gradientShift {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #9ad4d6, #f5c8e9); /* Updated background gradient */
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
 
-  .container {
-    max-width: 800px;
-    margin: 20px auto; /* Center the container horizontally */
-    padding: 20px;
-    background: linear-gradient(135deg, #cdffff, #c5d7ff); /* Adjusted gradient colors closer to white */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-    text-align: left; /* Align text content to the left */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto; /* Center the container horizontally */
+  padding: 20px;
+  background: linear-gradient(135deg, #cdffff, #c5d7ff); /* Adjusted gradient colors closer to white */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  text-align: left; /* Align text content to the left */
+}
 
 h1 {
   color: #333;
@@ -69,11 +70,33 @@ button.full-width {
 button.full-width:hover {
   background-color: #0056b3;
 }
+
 footer {
-  
   padding: 10px 0;
   position: fixed;
   bottom: 0;
   width: 100%;
   text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px; /* Further adjust padding for smaller screens */
+  }
+
+  input[type="text"],
+  textarea {
+    font-size: 14px; /* Adjust input font size for smaller screens */
+  }
+
+  button.full-width {
+    font-size: 14px; /* Adjust button font size for smaller screens */
+  }
 }
