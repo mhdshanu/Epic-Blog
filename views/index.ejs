@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <!-- Additional stylesheets or scripts as needed -->
+</head>
+
+<body>
+  <div class="container">
+    <h1>My Blog</h1>
+    <div class="button-container">
+      <a id="newPostBtn" href="/new">New Post</a>
+    </div>
+    <ul id="postsList">
+      <% for (let i = 0; i < posts.length; i++) { %>
+      <li>
+        <h2><%= posts[i].title %></h2>
+        <p><%= posts[i].content %></p>
+        <div class="blog-meta">
+          <small>By: <%= posts[i].author %></small>
+          <small>Date: <%= posts[i].date %></small>
+
+          <div class="actions">
+            <a class="edit" href="/edit/<%= posts[i].id %>">Edit</a>
+            <a class="delete" href="/api/posts/delete/<%= posts[i].id %>">Delete</a>
+          </div>
+        </div>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+  <%- include('partials/footer.ejs'); -%>
+</body>
+
+</html>
